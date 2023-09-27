@@ -752,7 +752,7 @@ function EnterLocation(override)
     elseif override then canEnter = true end
 
     QBCore.Functions.TriggerCallback('qb-vehicletuning:server:IsMechanicAvailable', function(currentMechanics)
-        if currentMechanics >= Config.MinOnlineMechanics and not override and PlayerData.job.name ~= 'mechanic' then
+        if currentMechanics >= Config.MinOnlineMechanics and not override and PlayerData.job.type ~= 'mechanic' then
             repairOnly = true
             for k, v in pairs(Config.DisabledCategoriesMechanics) do
                 if k ~= "repair" and not v and categories[k] then repairOnly = false end
@@ -916,7 +916,7 @@ end
 function SetupInteraction()
     QBCore.Functions.TriggerCallback('qb-vehicletuning:server:IsMechanicAvailable', function(currentMechanics)
         local text = CustomsData.drawtextui
-        if PlayerData.job.name ~= 'mechanic' and Config.DisableWhenMechanicsOnline and currentMechanics >= Config.MinOnlineMechanics then
+        if PlayerData.job.type ~= 'mechanic' and Config.DisableWhenMechanicsOnline and currentMechanics >= Config.MinOnlineMechanics then
             text = text .. ' is currently unavailable. Please find a mechanic.'
         else
             if Config.UseRadial then

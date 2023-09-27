@@ -55,7 +55,8 @@ Vehicle Classes:
 Config = Config or {}
 
 Config.Locations = {
-    ['Innocence'] = {
+    -- LOS SANTOS CUSTOMS OFICINA - TUDO EM 3 BLIPS
+    ['lscustommods'] = {
         settings = {
             label = 'Bennys Motorworks',
             welcomeLabel = "Welcome to Benny's Motorworks!",
@@ -68,7 +69,96 @@ Config.Locations = {
             scale = 0.65,
             color = 0,
             display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = false,
+            liveries = true,
+            wheels = true,
+            tint = false,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "LS Customs"
+        },
+		restrictions = {
+			job = { 'mechanic' },
+			deniedClasses = { 18 } 
+		},        
+		zones = {
+            { coords = vector3(-323.55, -133.56, 38.0), length = 6.0, width = 4.0, heading = 70.0, minZ = 29.88, maxZ = 50.48 },
+            { coords = vector3(-327.47, -144.73, 38.0), length = 6.0, width = 4.0, heading = 70.0, minZ = 29.88, maxZ = 50.48 },
+            { coords = vector3(-319.47, -123.73, 38.0), length = 6.0, width = 4.0, heading = 70.0, minZ = 29.88, maxZ = 50.48 },
+            { coords = vector3(-315.47, -113.73, 38.0), length = 6.0, width = 4.0, heading = 70.0, minZ = 29.88, maxZ = 50.48 },
+            { coords = vector3(-312.47, -102.73, 38.0), length = 6.0, width = 4.0, heading = 70.0, minZ = 29.88, maxZ = 50.48 },
+        }
+    },
+    -- LOS SANTOS OFICINA DOIS BLIPS DE PINTURA/COR DOS VIDROS
+	 ['lscustompintura'] = {
+        settings = {
+            label = 'Bennys Motorworks',
+            welcomeLabel = "Welcome to Benny's Motorworks!",
             enabled = true,
+        },
+        blip = {
+            label = 'Oficina LS Customs',
+            coords = vector3(-358.77, -133.79, 38.71),
+            sprite = 446,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = true,
+        },
+        categories = {
+            mods = false,
+            turbo = false,
+            repair = false,
+            respray = true,
+            liveries = true,
+            wheels = false,
+            tint = true,
+            plate = false,
+            extras = false,
+            neons = false,
+            xenons = false,
+            horn = false,
+            cosmetics = false,
+        },
+        drawtextui = {
+            text = "LS Customs"
+        },
+        restrictions = {
+			job = { 'mechanic' },
+			deniedClasses = { 18 } 
+		},
+        zones = {
+            { coords = vector3(-317.47, -94.22, 37.7), length = 6.0, width = 4.0, heading = 160.0, minZ = 0.88, maxZ = 50.48 },
+            { coords = vector3(-324.81, -91.04, 37.7), length = 6.0, width = 4.0, heading = 160.0, minZ = 0.88, maxZ = 50.48 },
+        }
+    },
+    -- LOS SANTOS OFICINA TRÊS BLIPS DE TUDO PARA CAMIÕES
+     ['lscustomcamioes'] = {
+        settings = {
+            label = 'Bennys Motorworks',
+            welcomeLabel = "Welcome to Benny's Motorworks!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Bennys Motorworks',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
         },
         categories = {
             mods = true,
@@ -86,16 +176,320 @@ Config.Locations = {
             cosmetics = true,
         },
         drawtextui = {
-            text = "Bennys Motorworks"
+            text = "LS Customs"
         },
-        restrictions = { deniedClasses = { 18 } },
+        restrictions = {
+            job = { 'mechanic' },
+            deniedClasses = { 18 } 
+        },
         zones = {
-            { coords = vector3(-212.55, -1320.56, 31.0), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
-            { coords = vector3(-222.47, -1329.73, 31.0), length = 6.0, width = 4.0, heading = 270.0, minZ = 29.88, maxZ = 33.48 },
+            { coords = vector3(-365.86, -85.03, 38.48), length = 6.0, width = 4.0, heading = 69.73, minZ = 37.48, maxZ = 39.48 },
+            { coords = vector3(-353.41, -89.42, 38.48), length = 6.0, width = 4.0, heading = 69.73, minZ = 37.48, maxZ = 39.48 },
+            { coords = vector3(-340.17, -94.25, 38.48), length = 6.0, width = 4.0, heading = 69.73, minZ = 37.48, maxZ = 39.48 },
         }
     },
+    -- LOS SANTOS OFICINA - HELIS
+     ['lscustomhelis'] = {
+        settings = {
+            label = 'Bennys Motorworks',
+            welcomeLabel = "Welcome to Benny's Motorworks!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Bennys Motorworks',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = true,
+            liveries = true,
+            wheels = true,
+            tint = true,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "LS Customs"
+        },
+        restrictions = {
+            job = { 'mechanic' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(-342.83, -142.76, 60.61), length = 6.0, width = 4.0, heading = 297.64, minZ = 59.61, maxZ = 61.61 },
+        }
+    },
+    -- EAST CUSTOMS - TUNAGEM #1
+     ['eastcustoms1'] = {
+        settings = {
+            label = 'EAST CUSTOMS',
+            welcomeLabel = "Bem vindo à Oficina East Customs!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Oficina East Customs',
+            coords = vector3(874.79, -2112.98, 30.46),
+            sprite = 488,
+            scale = 0.65,
+            color = 24,
+            display = 4,
+            enabled = true,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = false,
+            liveries = true,
+            wheels = true,
+            tint = false,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "East Customs"
+        },
+        restrictions = {
+            job = { 'mechanic2' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(875.94, -2125.11, 29.24), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.24, maxZ = 30.24 },
+            { coords = vector3(887.18, -2126.03, 29.24), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.24, maxZ = 30.24 },
+            { coords = vector3(897.86, -2127.03, 29.24), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.24, maxZ = 30.24 },
+            { coords = vector3(909.14, -2128.0, 29.24), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.24, maxZ = 30.24 },
+        }
+    },
+    -- EAST CUSTOMS - PINTURA #1
+     ['eastcustoms5'] = {
+        settings = {
+            label = 'EAST CUSTOMS',
+            welcomeLabel = "Bem vindo à Oficina East Customs!",
+            enabled = true,
+        },
+        blip = {
+            label = 'East Customs',
+            coords = vector3(874.79, -2112.98, 30.46),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = false,
+            turbo = false,
+            repair = false,
+            respray = true,
+            liveries = true,
+            wheels = false,
+            tint = true,
+            plate = false,
+            extras = false,
+            neons = false,
+            xenons = false,
+            horn = false,
+            cosmetics = false,
+        },
+        drawtextui = {
+            text = "East Customs"
+        },
+        restrictions = {
+            job = { 'mechanic2' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(888.18, -2101.27, 29.11), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.11, maxZ = 30.11 },
+            { coords = vector3(895.84, -2102.01, 29.11), length = 6.0, width = 4.0, heading = 175.51, minZ = 28.11, maxZ = 30.11 },
+        }
+    },
+    -- EAST CUSTOMS - Heli
+     ['eastcustoms7'] = {
+        settings = {
+            label = 'EAST CUSTOMS',
+            welcomeLabel = "Bem vindo à Oficina East Customs!",
+            enabled = true,
+        },
+        blip = {
+            label = 'East Customs',
+            coords = vector3(874.79, -2112.98, 30.46),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = true,
+            liveries = true,
+            wheels = true,
+            tint = true,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "Helis"
+        },
+        restrictions = {
+            job = { 'mechanic2' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(860.26, -2124.74, 31.02), length = 6.0, width = 4.0, heading = 223.66, minZ = 30.02, maxZ = 32.02 },
+        }
+    },
+    -- BENNYS - PINTURA
+    ['bennys1'] = {
+        settings = {
+            label = 'Oficina Bennys',
+            welcomeLabel = "Bem vindo a Oficina Bennys!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Oficina Bennys',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            sprite = 72,
+            scale = 0.65,
+            color = 81,
+            display = 4,
+            enabled = true,
+        },
+        categories = {
+            mods = false,
+            turbo = false,
+            repair = false,
+            respray = false,
+            liveries = true,
+            wheels = false,
+            tint = true,
+            plate = false,
+            extras = false,
+            neons = false,
+            xenons = false,
+            horn = false,
+            cosmetics = false,
+        },
+        drawtextui = {
+            text = "Pintura"
+        },
+        restrictions = {
+            job = { 'mechanic3' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(-199.07, -1324.14, 30.7), length = 6.0, width = 4.0, heading = 90.59, minZ = 29.7, maxZ = 31.7 },
+            { coords = vector3(-234.05, -1316.29, 30.48), length = 6.0, width = 4.0, heading = 179.99, minZ = 29.48, maxZ = 31.48 },
+        }
+    },
+    ['bennys2'] = {
+        settings = {
+            label = 'Bennys',
+            welcomeLabel = "Bem vindo a Oficina Bennys!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Bennys',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = true,
+            liveries = false,
+            wheels = true,
+            tint = false,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "Menu da Benny's"
+        },
+        restrictions = {
+            job = { 'mechanic3' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(-235.6, -1327.15, 30.48), length = 6.0, width = 4.0, heading = 183.81, minZ = 29.48, maxZ = 31.48 },
+            { coords = vector3(-211.69, -1323.36, 30.47), length = 6.0, width = 4.0, heading = 179.31, minZ = 29.47, maxZ = 31.47 },
+            { coords = vector3(-234.24, -1311.27, 18.04), length = 6.0, width = 4.0, heading = 151.73, minZ = 17.04, maxZ = 19.04 },
+        }
+    },
+    ['bennys3'] = {
+        settings = {
+            label = 'Bennys',
+            welcomeLabel = "Bem vindo a Oficina Bennys!",
+            enabled = true,
+        },
+        blip = {
+            label = 'Bennys',
+            coords = vector3(-205.6992, -1312.7377, 31.1588),
+            sprite = 72,
+            scale = 0.65,
+            color = 0,
+            display = 4,
+            enabled = false,
+        },
+        categories = {
+            mods = true,
+            turbo = true,
+            repair = true,
+            respray = true,
+            liveries = true,
+            wheels = true,
+            tint = true,
+            plate = true,
+            extras = true,
+            neons = true,
+            xenons = true,
+            horn = true,
+            cosmetics = true,
+        },
+        drawtextui = {
+            text = "Menu da Benny's"
+        },
+        restrictions = {
+            job = { 'mechanic3' },
+            deniedClasses = { 18 } 
+        },
+        zones = {
+            { coords = vector3(-227.35, -1310.69, 18.04), length = 6.0, width = 4.0, heading = 148.27, minZ = 17.04, maxZ = 19.04 },
+            { coords = vector3(-184.34, -1288.78, 31.76), length = 6.0, width = 4.0, heading = 0.14, minZ = 30.76, maxZ = 32.76 },
 
-    ['Power'] = {
+        }
+    },
+    --[[['Power'] = {
         settings = {
             label = 'Bennys Motorworks',
             welcomeLabel = "Welcome to Benny's Motorworks!",
@@ -335,7 +729,7 @@ Config.Locations = {
             { coords = vector3(135.92, -3030.5, 7.04), length = 6.0, width = 4.0, heading = 180.0, minZ = 6.0, maxZ = 10.0 },
         }
     },
-
+	]]
     ['MRPD'] = {
         settings = {
             label = 'MRPD Motorworks',

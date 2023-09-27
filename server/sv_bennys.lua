@@ -79,7 +79,7 @@ RegisterNetEvent('qb-customs:server:attemptPurchase', function(type, upgradeLeve
             Player.Functions.RemoveMoney(moneyType, price, "bennys")
         end
         if jobRestricted and job ~= 'mechanic' then
-            exports['qb-management']:AddMoney("mechanic", price)
+            --exports['qb-management']:AddMoney("mechanic", price)
         end
         TriggerClientEvent('qb-customs:client:purchaseSuccessful', source)
     else
